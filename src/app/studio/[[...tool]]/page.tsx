@@ -1,7 +1,7 @@
 "use client";
 
 import { NextStudio } from "next-sanity/studio";
-import config from "../../../../sanity.config";
+import config from "@/lib/sanity-studio-config";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 
