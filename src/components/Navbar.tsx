@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMenu, FiX, FiPhone } from "react-icons/fi";
+import { FaWhatsapp, FaTelegram, FaInstagram } from "react-icons/fa";
 import { useLang } from "@/context/LanguageContext";
 
 const NAV_LINKS = [
@@ -68,15 +69,58 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2">
           {/* Social Icons */}
           <motion.a
-            href="https://github.com/amireftekhar"
+            href="tel:+989937056703"
+            whileHover={{ scale: 1.1, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="Phone"
+          >
+            <FiPhone size={14} />
+          </motion.a>
+          <motion.a
+            href="https://wa.me/989931510348"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, y: -1 }}
             whileTap={{ scale: 0.95 }}
             className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp size={16} />
+          </motion.a>
+          <motion.a
+            href="https://t.me/thelofy"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="Telegram"
+          >
+            <FaTelegram size={16} />
+          </motion.a>
+          <motion.a
+            href="https://instagram.com/thelofy"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="Instagram"
+          >
+            <FaInstagram size={16} />
+          </motion.a>
+          <motion.a
+            href="https://github.com/amireftekharv"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="GitHub"
           >
             <FiGithub size={16} />
           </motion.a>
@@ -87,6 +131,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1, y: -1 }}
             whileTap={{ scale: 0.95 }}
             className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+            aria-label="LinkedIn"
           >
             <FiLinkedin size={16} />
           </motion.a>
@@ -136,10 +181,45 @@ export default function Navbar() {
               ))}
               <div className="flex items-center gap-3 pt-2 border-t border-white/5">
                 <a
-                  href="https://github.com/amireftekhar"
+                  href="tel:+989937056703"
+                  className="text-white/50 hover:text-white transition-colors"
+                  aria-label="Phone"
+                >
+                  <FiPhone size={18} />
+                </a>
+                <a
+                  href="https://wa.me/989931510348"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/50 hover:text-white transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <FaWhatsapp size={18} />
+                </a>
+                <a
+                  href="https://t.me/thelofy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-white transition-colors"
+                  aria-label="Telegram"
+                >
+                  <FaTelegram size={18} />
+                </a>
+                <a
+                  href="https://instagram.com/thelofy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={18} />
+                </a>
+                <a
+                  href="https://github.com/amireftekharv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-white transition-colors"
+                  aria-label="GitHub"
                 >
                   <FiGithub size={18} />
                 </a>
@@ -148,6 +228,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/50 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <FiLinkedin size={18} />
                 </a>

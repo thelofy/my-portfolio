@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiCopy, FiCheck } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiCopy, FiCheck, FiPhone } from "react-icons/fi";
+import { FaWhatsapp, FaTelegram, FaInstagram } from "react-icons/fa";
 import { useLang } from "@/context/LanguageContext";
 
 export default function Contact() {
@@ -68,9 +69,12 @@ export default function Contact() {
           className="relative inline-flex items-center gap-4 px-6 py-4 rounded-2xl border border-white/8 bg-white/[0.03] mb-10 group"
         >
           <FiMail className="text-violet-400 shrink-0" size={20} />
-          <span className="text-white/70 font-mono text-sm sm:text-base">
+          <a
+            href={`mailto:${dict.contact.email}`}
+            className="text-white/70 font-mono text-sm sm:text-base hover:text-white transition-colors"
+          >
             {dict.contact.email}
-          </span>
+          </a>
           <motion.button
             onClick={handleCopyEmail}
             whileHover={{ scale: 1.05 }}
@@ -99,15 +103,57 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.35, duration: 0.6 }}
-          className="flex items-center justify-center gap-4 mb-20"
+          className="flex flex-wrap items-center justify-center gap-3 mb-20"
         >
           <motion.a
-            href="https://github.com/amireftekhar"
+            href="tel:+989937056703"
+            whileHover={{ scale: 1.08, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+          >
+            <FiPhone size={16} />
+            {dict.contact.phone}
+          </motion.a>
+          <motion.a
+            href="https://wa.me/989931510348"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.08, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+          >
+            <FaWhatsapp size={16} />
+            {dict.contact.whatsapp}
+          </motion.a>
+          <motion.a
+            href="https://t.me/thelofy"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.08, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+          >
+            <FaTelegram size={16} />
+            {dict.contact.telegram}
+          </motion.a>
+          <motion.a
+            href="https://instagram.com/thelofy"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.08, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+          >
+            <FaInstagram size={16} />
+            {dict.contact.instagram}
+          </motion.a>
+          <motion.a
+            href="https://github.com/amireftekharv"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.08, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
           >
             <FiGithub size={16} />
             {dict.contact.github}
@@ -118,7 +164,7 @@ export default function Contact() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.08, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2.5 px-5 py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
+            className="flex items-center justify-center gap-2.5 w-[140px] py-2.5 rounded-xl border border-white/8 bg-white/[0.03] text-white/50 hover:text-white hover:bg-white/[0.07] hover:border-white/15 transition-all duration-200 text-sm font-medium"
           >
             <FiLinkedin size={16} />
             {dict.contact.linkedin}
